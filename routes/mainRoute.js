@@ -1,4 +1,4 @@
-const { getRequest } = require("../controllers/mainControllers/mainGetRequest");
+const { getRequest } = require("../controllers/mainControllers/mainGetRequests");
 
 const router = require("express").Router();
 

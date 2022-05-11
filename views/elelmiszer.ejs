@@ -46,7 +46,8 @@
                             </h4>
                             <p>Kaja ára: <%= foods[i].ar %> Ft
                             </p>
-                            <img src="<%= foods[i].kep %>" alt="kep" class="w-100">
+                            <img src="<%= foods[i].kep %>" alt="kep" class="w-100 h-25">
+                            <a href="/elelmiszer/<%= foods[i].vonalkod %>" class="text-white">Megjelenítés</a>
                         </div>
                         <% if (i % 3==2) { %>
                 </div>

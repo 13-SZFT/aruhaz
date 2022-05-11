@@ -13,7 +13,7 @@ app.use(express.urlencoded({ extended: true }));
 const PORT = process.env.PORT || 5000;
 
 // Route-ok
-app.get("/", require("./routes/mainRoute"));
+app.use("/", require("./routes/mainRoute"));
 app.use("/elelmiszer", require("./routes/elemiszerRoute"));
 app.use("/ruha", require("./routes/ruhaRoute"));
 

@@ -10,4 +10,15 @@ const elemiszerekMegjelenitese = async (req, res, next) => {
     }
 }
 
-module.exports = { elemiszerekMegjelenitese };
+const egyElemiszerMegjelenitese = async (req, res, next) => {
+    try {
+        const vonalkod = req.params.vonalkod;
+        const kaja = await Food.findOne({ vonalkod });
+
+        res.render("egyElelmiszer", { kaja });
+    } catch (error) {
+        console.log(error.message);
+    }
+}
+
+module.exports = { elemiszerekMegjelenitese, egyElemiszerMegjelenitese };
