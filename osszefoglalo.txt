@@ -10,8 +10,9 @@ elelmiszer: /elemiszer/
     app.use("/elelmiszer", require("./routes/elemiszerRoute"));
     - routes/elelmiszerRoute.js
     router.get("/", elemiszerekMegjelenitese);
-    router.get("/:vonalkod", egyElemiszerMegjelenitese);
     router.get("/feltoltes", feltoltOldalLekeres);
+    router.get("/modositas", modositOldalLekeres);
+    router.get("/:vonalkod", egyElemiszerMegjelenitese);
     router.post("/feltoltes", elemiszerFeltoltes);
     - controllers/elelmiszerControllers/elelmiszerRequests.js
     - controllers/elelmiszerControllers/elelmiszerFeltoltesRequests.js
@@ -32,4 +33,5 @@ ruha: /ruha/
     - controllers/ruhaControllers/ruhaFeltoltesRequests.js
     - models/Robe.js
     - views/ruha.ejs
+    - views/egyRuha.ejs
     - views/ruhaFeltolt.ejs

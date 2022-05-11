@@ -12,9 +12,10 @@ const ruhakMegjelenitese = async (req, res, next) => {
 
 const egyRuhaMegjelenitese = async (req, res, next) => {
     try {
-        const robes = await Robe.find();
-        // res.send(foods);
-        res.render("ruha", { robes });
+        const vonalkod = req.params.vonalkod;
+        const ruha = await Robe.findOne({ vonalkod });
+
+        res.render("egyRuha", { ruha });
     } catch (error) {
         console.log(error.message);
     }
